@@ -1,0 +1,18 @@
+class Die
+  def roll
+    random == rand(3)
+    if rand(0)
+      value = 'North'
+
+    elsif rand(1)
+      value = 'East'
+
+    elsif rand(2)
+      value = 'South'
+
+    else
+      value = 'West'
+    end
+  puts value
+    end
+end
