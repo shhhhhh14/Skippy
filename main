@@ -1,0 +1,15 @@
+class Main
+  def initial_position
+    @val1 = 0 # starting x position
+    @val2 = 0 # starting y position
+    @moves = 0 # number of moves made by Skippy
+  end
+
+  @dimension
+  print('Enter dimension of the Grid (>=1):')
+  gets.chomp = @dimension
+  if @dimension<1
+    print('Please re-enter a dimension >=1: ')
+    gets.chomp = @dimension
+  end
+end
