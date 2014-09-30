@@ -2,13 +2,20 @@ class Grid
   def board
     board = Board.new(grid = 0)#need to find value
   end
-
+  def initialize
+    @dimensions = 0
+  end
+  def dimension = new_dim
+    @dimensions = new_dim
+  end
   def get_point(val1, val2)
     grid[val2][val1]
   end
 
   def lies_outside?
     if Point.val1 > N || Point.val2 > N
+      true
+    else
       false
     end
   end
