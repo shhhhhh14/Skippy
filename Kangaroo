@@ -1,20 +1,10 @@
 class Kangaroo
-  def at_home?
-    if @val1 == N && @val2 == N
-      print('Skippy is home and the program has ended')
-      true
-    else
-      false
-    end
-  end
-
   def Kangaroo.at_home?
-
+    Die.roll
   end
 
   def hop! #take a random hop in one direction
-    while val1 * val1 + val2 * val2 <= N * N
-      moves += 1
+     moves += 1
       r = moves.random
       if Die.roll == 'North'
         val1 += 1
@@ -25,6 +15,15 @@ class Kangaroo
       else Die.roll ==  'West'
         val2 -= 1
       end
+    end
+
+  def at_home?
+    N == @dimension && N == Point.move!
+    if @val1 == N && @val2 == N
+      print('Skippy is home and the program has ended')
+      true
+    else
+      false
     end
   end
 end
