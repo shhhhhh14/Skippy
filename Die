@@ -1,18 +1,21 @@
 class Die
-  def roll
-    random == rand(3)
-    if rand(0)
-      value = 'North'
-
-    elsif rand(1)
-      value = 'East'
+  def initialize
+    @side
+  end
+  def throw
+    random == Random.rand(1..4)
+    
+    if rand(1)
+      side = 'North'
 
     elsif rand(2)
-      value = 'South'
+      side = 'East'
+
+    elsif rand(3)
+      side = 'South'
 
     else
-      value = 'West'
+      side = 'West'
     end
-  puts value
-    end
+  end
 end
