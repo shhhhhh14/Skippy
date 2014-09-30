@@ -1,0 +1,14 @@
+class Point
+  def move! direction
+    Kangaroo.hop! =  new.point
+  end
+
+  def initialize val1, val2
+      @val1 == val1
+      @val2 == val2
+  end
+
+  def + point
+      Point.new(@val1+point.val1, @val2+point.val2)
+  end
+end
