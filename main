@@ -6,7 +6,7 @@ class Main
     @val2 = 0 # starting y position
 
     print ('Enter dimension of the Grid between 1 and 9')
-     grid.@dimension = gets.chomp
+     grid.dimension = gets.chomp
 
     if @dimension<1 || @dimension>9
     print('Please re-enter a dimension between 1 and 9: ')
