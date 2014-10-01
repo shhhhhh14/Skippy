@@ -1,10 +1,7 @@
 class Main
   grid = Grid.new
   kangaroo = Kangaroo.new
-  def initial_position
-    @val1 = 0 # starting x position
-    @val2 = 0 # starting y position
-
+  
     print ('Enter dimension of the Grid between 1 and 9')
      grid.dimension = gets.chomp
 
