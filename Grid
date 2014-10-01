@@ -5,14 +5,14 @@ class Grid
   def initialize
     @dimensions = 0
   end
-  def dimension = new_dim
+  def dimension=(new_dim)
     @dimensions = new_dim
   end
   def get_point(val1, val2)
     grid[val2][val1]
   end
 
-  def lies_outside?
+  def lies_outside?(Point)
     if Point.val1 > N || Point.val2 > N
       true
     else
