@@ -1,10 +1,11 @@
 class Die
+  attr_accessor :side
   def initialize
     @side
   end
   def throw
     random == Random.rand(1..4)
-    
+
     if rand(1)
       side = 'North'
 
