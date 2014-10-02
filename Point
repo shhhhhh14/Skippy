@@ -1,11 +1,12 @@
 class Point
+  attr_accessor :val1, :val2
   def move! direction
     Kangaroo.hop! =  new.point
   end
 
-  def initialize val1, val2
-      @val1 == val1
-      @val2 == val2
+  def initialize
+      @val1 = 0
+      @val2 = 0
   end
 
   def + point
