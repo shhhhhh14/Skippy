@@ -1,7 +1,5 @@
 class Grid
-  def board
-    board = Board.new(grid = 0)#need to find value
-  end
+  attr_accessor :dimensions
   def initialize
     @dimensions = 0
   end
@@ -12,8 +10,8 @@ class Grid
     grid[val2][val1]
   end
 
-  def lies_outside?(Point)
-    if Point.val1 > N || Point.val2 > N
+  def lies_outside?(point)
+    if point.val1 > @dimensions || point.val2 > @dimensions
       true
     else
       false
