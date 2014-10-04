@@ -2,6 +2,7 @@ class Grid
   attr_accessor :dimensions
   def initialize(dimensions)
     @dimensions = dimensions
+    @dimensions = 0
   end
   def dimension=(new_dim)
     @dimensions = new_dim
@@ -11,7 +12,7 @@ class Grid
   end
 
   def lies_outside?(point)
-    if point.val1 > @dimensions || point.val2 > @dimensions
+    if point.val1 > @dimensions || point.val2 > @dimensions ||point.val1<0 ||point.val2<0
       true
     else
       false
@@ -19,3 +20,4 @@ class Grid
   end
 
 end
+
