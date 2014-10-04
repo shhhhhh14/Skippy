@@ -7,16 +7,16 @@ class Die
     random == Random.rand(1..4)
     case random
     when rand(1)
-      @side = @North
+      @side = :North
 
     when rand(2)
-      @side = @East
+      @side = :East
 
     when rand(3)
-      @side = @South
+      @side = :South
 
     when
-      @side = @West
+      @side = :West
     end
   end
 end
