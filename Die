@@ -5,18 +5,18 @@ class Die
   end
   def throw
     random == Random.rand(1..4)
+    case random
+    when rand(1)
+      @side = @North
 
-    if rand(1)
-      side = 'North'
+    when rand(2)
+      @side = @East
 
-    elsif rand(2)
-      side = 'East'
+    when rand(3)
+      @side = @South
 
-    elsif rand(3)
-      side = 'South'
-
-    else
-      side = 'West'
+    when
+      @side = @West
     end
   end
 end
