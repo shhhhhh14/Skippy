@@ -30,7 +30,7 @@ class Kangaroo
   end
 
   def at_home?(dimension)
-    if @location.val1 == dimension && @location.val2 == dimension
+    if @current_point.val1 == dimension && @current_point.val2 == dimension
       true
     else
       false
