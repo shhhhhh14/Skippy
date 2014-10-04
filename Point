@@ -1,15 +1,35 @@
 class Point
-  attr_accessor :val1, :val2
-  def move! direction
-    Kangaroo.hop! =  new.point
-  end
-
+  attr_accessor :val1, :val2, :East, :North, :South, :West
   def initialize
-      @val1 = 0
-      @val2 = 0
+    @val1 = 0
+    @val2 = 0
+  end
+  def move!(direction)
+    case direction
+    when North
+
+    @val2 += 1
+
+    when East
+
+    @val1 += 1
+
+    when South
+
+    @val2 -= 1
+
+    when West
+
+    @val1 -= 1
+
+  else
+
+    @val2 +=1
+    end
   end
 
-  def + point
-      Point.new(@val1+point.val1, @val2+point.val2)
-  end
+    def print
+
+      puts "Hopped to: (#{@val1}, #{@val2})"
+    end
 end
