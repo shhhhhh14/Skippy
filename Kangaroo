@@ -1,26 +1,36 @@
 class Kangaroo
-  def Kangaroo.at_home?
-    Die.roll
+  attr_accessor  :current_point, :die, :grid
+  def initialize grid
+    @current_point = Point.new
+    @die = Die.new
+    @grid = grid
   end
 
   def hop! #take a random hop in one direction
-     moves += 1
-      r = moves.random
-      if Die.roll == 'North'
-        val1 += 1
-      elsif Die.roll == 'East'
-        val1 -= 1
-      elsif Die.roll ==  'South'
-        val2 += 1
-      else Die.roll ==  'West'
-        val2 -= 1
-      end
-    end
+     moves = 0
+     begin
+        temp_point = Point.new
+        @current_point.print
+        temp_point.val1 = @current_point.val1
+        temp_point.val2=@current_point.val2
+        temp_point.move! @die.throw
+        if @grid.lies_outside? temp_point
+          puts"Oops, hit the boundary: #{temp_point.val1}, #{temp_point.val2}"
+        else
+          @current_point.move! @die.side
+          moves += 1
+        end
+     end
+  end
 
-  def at_home?
-    N == @dimension && N == Point.move!
-    if @val1 == N && @val2 == N
-      print('Skippy is home and the program has ended')
+  def Kangaroo.at_home?
+    @grid.dimensions
+    @current_point.print
+    puts "Finished in #{moves} hops!"
+  end
+
+  def at_home?(dimension)
+    if @location.val1 == dimension && @location.val2 == dimension
       true
     else
       false
