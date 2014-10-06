@@ -1,4 +1,5 @@
 class Point
+  require_relative 'grid'
   attr_accessor :val1, :val2, :East, :North, :South, :West
   def initialize
     @val1 = 0
@@ -32,4 +33,29 @@ class Point
 
       puts "Hopped to: (#{@val1}, #{@val2})"
     end
+end
+
+require_relative 'grid'
+class Point
+
+  def ==(other)
+
+    super
+
+    if @x == other.x && @y == other.y
+
+      true
+
+    else
+
+      false
+
+    end
+
+  end
+
+
+
+
+
 end
