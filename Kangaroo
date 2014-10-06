@@ -1,5 +1,7 @@
 class Kangaroo
-  attr_accessor  :current_point, :die, :grid
+  require_relative 'point'
+  require_relative 'die'
+  attr_accessor  :current_point, :die,
   def initialize grid
     @current_point = Point.new
     @die = Die.new
@@ -23,7 +25,7 @@ class Kangaroo
      end
   end
 
-  def Kangaroo.at_home?
+  while !at_home?
     @grid.dimensions
     @current_point.print
     puts "Finished in #{moves} hops!"
