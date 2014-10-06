@@ -1,4 +1,5 @@
 class Grid
+  require_relative 'main'
   attr_accessor :dimensions
   def initialize(dimensions)
     @dimensions = dimensions
