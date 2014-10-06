@@ -1,0 +1,3 @@
+class Kangaroo
+
+end
