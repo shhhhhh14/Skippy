@@ -1,54 +1,35 @@
-class Point
-	require_relative 'grid'
-	require_relative 'die'
-	require_relative 'kangaroo'
- 	attr_accessor :val1, :val2, :East, :North, :South, :West
-  	def initialize
- 		@val1 = 0
-    		@val2 = 0
-	end
+class Point #Represents a mutable point in the grid
 
-	def points_compare(val1, val2, val1.2, val2.2)
-		true
-  	else
-		false
+  attr_accessor :val1, :val2, :x, :y, :East, :North, :South, :West
+  def initialize(x,y)
+    @val1 = x
+    @val2 = y
+  end
 
-    	end
-	
-	def move!(direction)
-  	case direction
-  	when North
-
-    @val2 += 1
-
-    when East
-
-    @val1 += 1
-
-    when South
-
-    @val2 -= 1
-
-    when West
-
-    @val1 -= 1
-
-  else
-
-    @val2 +=1
+  def  points_equal?(val1, val2, x, y) # compares current point of skippy to his temporary point  
+    if val1 == x && val2 == y
+      true
+    else
+      false
     end
   end
 
-    def print
-
-      puts "Hopped to: (#{@val1}, #{@val2})"
+  def move!(direction) #moves in the given direction
+    case direction
+      when :North #moves north
+        @val2 += 1
+      when :East #moves east
+        @val1 += 1
+      when :South  # moves south
+        @val2 -= 1
+      when :West  #moves west
+        @val1 -= 1
+      else
+        @val2 +=1
     end
-end
-
-
-
+  end
 
  
-
-
 end
+
+
